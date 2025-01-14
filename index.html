@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@
 
     <title>Pomodoro</title>
 </head>
+
 <body>
-    
+
     <!--Timer do pomodoro-->
     <main>
         <div class="container">
@@ -41,8 +43,8 @@
     </div>
 
     <!--Navegação-->
-	<div class="nav-bar">
-		<ul>
+    <div class="nav-bar">
+        <ul>
             <li>
                 <a href="https://wangeloow.github.io/to-do-list/" target="_blank">
                     <i class="fa-solid fa-list-check" title="Tarefas"></i>
@@ -53,15 +55,43 @@
                     <i class="fa-solid fa-stopwatch" title="Cronômetro"></i>
                 </a>
             </li>
-		</ul>
+            <li id="settings-btn">
+                <i class="fa-solid fa-cog" title="Configurações"></i>
+            </li>
+        </ul>
         <div id="indicador">
             <span id="start-btn"><i class="fa-solid fa-play" title="Play"></i></span>
         </div>
-	</div>
+    </div>
+
+    <!-- Modal de Configurações -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Configurações</h2>
+            <div class="line"></div>
+            <form id="settings-form">
+                <div>
+                    <label for="pomodoro-time">POMODORO</label>
+                    <input type="number" id="pomodoro-time" value="25" min="1" max="60">
+                </div>
+                <div>
+                    <label for="break-time">PAUSA CURTA</label>
+                    <input type="number" id="break-time" value="5" min="1" max="60">
+                </div>
+                <div>
+                    <label for="long-break-time">PAUSA LONGA</label>
+                    <input type="number" id="long-break-time" value="15" min="1" max="60">
+                </div>
+                <button type="button" id="save-settings">Salvar</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Som a ser tocado quando o timer chegar a 0 -->
     <audio src="audio/audio.mp3"></audio>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
