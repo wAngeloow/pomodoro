@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --background: rgb(255, 255, 255);
+}
+
+body{
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*TIMER POMODORO*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 10px rgba(255, 0, 0, 0.763);
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.items .fa-solid{
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+}
+
+.time p {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.time p:nth-of-type(2) {
+    position: relative;
+    top: -.3rem;
+    margin-inline: .3rem;
+}
+
+/*OPÇÕES*/
+.active {
+    color: red;
+    font-weight: 700;
+}
+
+.nav-buttons{
+    margin-top: 50px;
+}
+
+.nav-buttons button {
+    font-size: 1.3rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+}
+
+/*NAVEGAÇÃO*/
+.nav-bar{
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.nav-bar .fa-solid {
+    font-size: 35px;
+    color: white;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+#indicador{
+    position: absolute;
+    background-color: red;
+    width: 130px;
+    height: 130px;
+    top: -40%;
+    right: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: var(--background) solid 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="img/tomato.svg">
+
+    <title>Pomodoro</title>
+</head>
+<body>
+    
+    <!--Timer do pomodoro-->
+    <main>
+        <div class="container">
+            <div class="timer">
+                <div class="circle">
+                    <div class="items">
+                        <div class="time">
+                            <p id="minutes">25</p>
+                            <p>:</p>
+                            <p id="seconds">00</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrows-rotate" title="Resetar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Opções-->
+    <div class="nav-buttons">
+        <button id="btn-pomodoro" class="active">POMODORO</button>
+        <button id="btn-break">PAUSA CURTA</button>
+        <button id="btn-long-break">PAUSA LONGA</button>
+    </div>
+
+    <!--Navegação-->
+	<div class="nav-bar">
+		<ul>
+            <li>
+                <a href="https://wangeloow.github.io/to-do-list/" target="_blank">
+                    <i class="fa-solid fa-list-check" title="Tarefas"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://wangeloow.github.io/cronometro/" target="_blank">
+                    <i class="fa-solid fa-stopwatch" title="Cronômetro"></i>
+                </a>
+            </li>
+		</ul>
+        <div id="indicador">
+            <span id="start-btn"><i class="fa-solid fa-play" title="Play"></i></span>
+        </div>
+	</div>
+
+    <!-- Som a ser tocado quando o timer chegar a 0 -->
+    <audio src="audio/audio.mp3"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
